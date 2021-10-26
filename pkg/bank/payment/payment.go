@@ -22,11 +22,12 @@ func PaymentSources(cards []types.Card) []types.PaymentSource {
 		if card.Balance > 0 && card.Active  {
 			sources = append(sources, types.PaymentSource{
 				Type: "card",
-				Number: string(card.PAN),
-
+				Number: card.Number,
+				Balance: card.Balance,
 
 			})
 		} 
 	}
+	return sources
    }
    

@@ -26,6 +26,7 @@ type Card struct {
 	Name	 string
 	Active	 bool
 	MinBalance Money
+	Number string
 }
 
 // Payment представляет информацию о платеже
