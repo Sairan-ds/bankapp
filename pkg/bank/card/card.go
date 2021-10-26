@@ -72,3 +72,20 @@ func Total(cards []types.Card) types.Money {
 	return sum
 
 }
+
+// PaymentSources - выбор карты для оплаты
+func PaymentSources(cards []types.Card) []types.PaymentSource {
+	
+	var sources []types.PaymentSource
+	for _, card := range cards{
+		if card.Balance > 0 && card.Active  {
+			sources = append(sources, types.PaymentSource{
+				Type: "card",
+				Number: card.Number,
+				Balance: card.Balance,
+
+			})
+		} 
+	}
+	return sources
+   }
