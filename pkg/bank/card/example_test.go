@@ -108,17 +108,17 @@ func ExampleTotal() {
 func ExamplePaymentSources() {
 	cards := []types.Card{
 		{
-			ID: 01,
+			PAN: "01",
 			Balance: 10000,
 			Active: true,
 		},
 		{
-			ID: 02,
+			PAN: "02",
 			Balance: 30000,
 			Active: true,
 		},
 		{
-			ID: 03,
+			PAN: "03",
 			Balance: -20000,
 			Active: true,
 		},
@@ -128,6 +128,6 @@ func ExamplePaymentSources() {
 		fmt.Println(source.Number)
 	}
 	//Output: 
-	// 1
-	// 2
+	// 01
+	// 02
 }

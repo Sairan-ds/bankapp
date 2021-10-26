@@ -39,6 +39,6 @@ type Payment struct {
 // PaymentSource - выбор карты
 type PaymentSource struct {
 	Type string //'card'
-	Number int // номер вида '5058 xxxx xxxx 8888'
+	Number string // номер вида '5058 xxxx xxxx 8888'
 	Balance Money // баланс в дирамах
 }
